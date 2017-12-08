@@ -1,5 +1,7 @@
 package com.example.pedrobarata.faxinapp.adapter;
 
+import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +10,10 @@ import android.widget.TextView;
 
 import com.example.pedrobarata.faxinapp.R;
 import com.example.pedrobarata.faxinapp.model.Semana;
+import com.example.pedrobarata.faxinapp.model.Situacao;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,11 +32,12 @@ public class SemanaAdapter extends RecyclerView.Adapter<SemanaAdapter.SemanaHold
     public static class SemanaHolder extends RecyclerView.ViewHolder {
         TextView tvNome;
         TextView tvComodo;
-
+        CardView cardSemana;
         public SemanaHolder(View itemView) {
             super(itemView);
             tvNome = (TextView) itemView.findViewById(R.id.tvNome);
             tvComodo = (TextView) itemView.findViewById(R.id.tvComodo);
+            cardSemana = (CardView) itemView.findViewById(R.id.cardSemana);
         }
     }
 
@@ -48,10 +54,22 @@ public class SemanaAdapter extends RecyclerView.Adapter<SemanaAdapter.SemanaHold
 //        SimpleDateFormat formataData = new SimpleDateFormat("dd/MM/yyyy");
 
         try {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+
+            long data = semanaList.get(position).getDataFim().getTime() - semanaList.get(position).getDataIncio().getTime();
 
             holder.tvNome.setText(semanaList.get(position).getNomeUsuario());
             holder.tvComodo.setText(semanaList.get(position).getComodo().getNome());
-            }  catch (Exception e) {
+            if(semanaList.get(position).getSituacao() == Situacao.CONCLUIDO) {
+                holder.cardSemana.setBackgroundColor(Color.parseColor("#bbeec3"));
+                }
+            if(semanaList.get(position).getSituacao() == Situacao.PENDENTE) {
+//                    && data < -7) {
+                holder.cardSemana.setBackgroundColor(Color.parseColor("#bbeec3"));
+            }
+
+        }  catch (Exception e) {
 
             e.printStackTrace();
         }

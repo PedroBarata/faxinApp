@@ -28,6 +28,7 @@
     <string-array name="navigation_drawer_items_array">
         <item>Semana</item>
         <item>Visão Geral</item>
+        <item>Gerar Mês</item>
         <item>Conta</item>
         <item>Cadastrar Cômodos</item>
         <item>Cadastrar Usuários</item>

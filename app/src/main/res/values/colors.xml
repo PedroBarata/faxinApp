@@ -15,7 +15,8 @@
     <color name="bgMenu">#e3e3e3</color>
     <color name="bgIcons">#4d4d4d</color>
     <color name="bgTextMenu">#636363</color>
-    <color name="divisaoHorizontal">#dedede</color>
+    <color name="botaoDesabilitado">#cecacb</color>
+    <color name="divisaoHorizontal">#cecacb</color>
     <color name="textBranco">#fefefe</color>
     <color name="textBlack">#000000</color>
     <color name="transparente">#76ffffff</color>

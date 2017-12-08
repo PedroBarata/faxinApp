@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.pedrobarata.faxinapp.fragment.GerarMesFragment;
 import com.example.pedrobarata.faxinapp.model.DataModel;
 import com.example.pedrobarata.faxinapp.adapter.DrawerItemCustomAdapter;
 import com.example.pedrobarata.faxinapp.R;
@@ -44,16 +45,17 @@ public class HomeActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
         setupToolbar();
-        DataModel[] drawerItem = new DataModel[6];
+        DataModel[] drawerItem = new DataModel[7];
 
         fragmentManager.beginTransaction().replace(R.id.frame_principal, new SemanaFragment()).commit();
 
         drawerItem[0] = new DataModel(R.drawable.ic_event_note_black_24dp, "Semana");
         drawerItem[1] = new DataModel(R.drawable.ic_trending_up_black_24dp, "Visão Geral");
-        drawerItem[2] = new DataModel(R.drawable.ic_settings_black_24dp, "Conta");
-        drawerItem[3] = new DataModel(R.drawable.ic_settings_black_24dp, "Cadastrar Cômodos");
-        drawerItem[4] = new DataModel(R.drawable.ic_settings_black_24dp, "Cadastrar Usuários");
-        drawerItem[5] = new DataModel(R.drawable.ic_exit_to_app_black_24dp, "Sair");
+        drawerItem[2] = new DataModel(R.drawable.ic_schedule_black_24dp, "Gerar Mês");
+        drawerItem[3] = new DataModel(R.drawable.ic_settings_black_24dp, "Conta");
+        drawerItem[4] = new DataModel(R.drawable.ic_local_laundry_service_black_24dp, "Cadastrar Cômodos");
+        drawerItem[5] = new DataModel(R.drawable.ic_person_black_24dp, "Cadastrar Usuários");
+        drawerItem[6] = new DataModel(R.drawable.ic_exit_to_app_black_24dp, "Sair");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -90,18 +92,22 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case 2:
-                fragment = new ContaFragment();
+                fragment = new GerarMesFragment();
                 break;
 
             case 3:
-                fragment = new CadastroComodoFragment();
+                fragment = new ContaFragment();
                 break;
 
             case 4:
-                fragment = new CadastroUsuarioFragment();
+                fragment = new CadastroComodoFragment();
                 break;
 
             case 5:
+                fragment = new CadastroUsuarioFragment();
+                break;
+
+            case 6:
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
