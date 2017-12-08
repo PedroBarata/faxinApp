@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/loginFragment"
+    android:layout_height="match_parent"
+    tools:context="com.example.pedrobarata.faxinapp.fragment.LoginFragment">
+
+    <LinearLayout
+        style="@style/containerScroll">
+
+        <ImageView
+            android:id="@+id/auth_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_faca_login"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/ed_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/str_login"
+                android:inputType="textFilter|textNoSuggestions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/ed_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/str_senha"
+                android:inputType="textPassword"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_entrar"
+            style="@style/botao_bg_azul"
+            android:layout_width="155dp"
+            android:layout_height="35dp"
+            android:text="@string/str_bt_entrar"
+            android:layout_marginBottom="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

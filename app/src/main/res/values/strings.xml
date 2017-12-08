@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FaxinApp</string>
+
+    <string name="str_faca_login">Faça login na sua conta</string>
+    <string name="str_login">Login</string>
+    <string name="str_senha">Senha</string>
+    <string name="str_hint_login">Digite seu login</string>
+    <string name="str_hint_senha">Digite sua senha</string>
+    <string name="str_cb_empresa">Empresa</string>
+    <string name="str_bt_entrar">Entrar</string>
+    <string name="str_esqueceu_senha">Esqueceu sua senha?</string>
+    <string name="str_vazio"></string>
+    <string name="str_sem_conexao">Sem conexão</string>
+    <string name="str_tentar">Tentar novamente</string>
+    <string name="str_sair">Sair</string>
+    <string name="str_fale_conosco">FALE CONOSCO</string>
+    <string name="str_atualizar">Atualizar</string>
+    <string name="title_activity_nav_home">NavHome</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Semana</item>
+        <item>Visão Geral</item>
+        <item>Conta</item>
+        <item>Cadastrar Cômodos</item>
+        <item>Cadastrar Usuários</item>
+        <item>Sair</item>
+    </string-array>
+
+</resources>

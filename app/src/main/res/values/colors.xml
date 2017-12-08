@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/bgActivity</color>
+    <color name="colorPrimaryDark">@color/transBorde</color>
+    <color name="colorAccent">@color/bgVerde</color>
+
+    <color name="bgVerde">#31bceb</color>
+    <color name="transBorde">#18b3e7</color>
+    <color name="bgStar">#ffc400</color>
+    <color name="bgNewFF">#4ac5ee</color>
+    <color name="bgSuperacao">#4db8ff</color>
+    <color name="bgProjecao">#f5a09d</color>
+    <color name="selectTab">#ffff8f</color>
+    <color name="bgActivity">#c6c6c6</color>
+    <color name="bgMenu">#e3e3e3</color>
+    <color name="bgIcons">#4d4d4d</color>
+    <color name="bgTextMenu">#636363</color>
+    <color name="divisaoHorizontal">#dedede</color>
+    <color name="textBranco">#fefefe</color>
+    <color name="textBlack">#000000</color>
+    <color name="transparente">#76ffffff</color>
+    <color name="check_verde">#98dde7</color>
+</resources>
+

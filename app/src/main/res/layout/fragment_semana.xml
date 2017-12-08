@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/semanaFragment"
+    android:orientation="vertical"
+    tools:context="com.example.pedrobarata.faxinapp.fragment.SemanaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@mipmap/ic_maquina" />
+
+            <com.github.lzyzsd.circleprogress.CircleProgress
+                android:id="@+id/circle_progress"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="68dp"
+                android:layout_marginLeft="47dp"
+                app:circle_finished_color="@color/bgVerde"
+                app:circle_progress="25"
+                app:circle_unfinished_color="@color/cardview_light_background"
+                app:circle_text_color="@color/bgTextMenu"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divisaoHorizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/textBranco">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semana " />
+        <TextView
+            android:id="@+id/numeroSemana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="número" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/textBranco"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sua tarefa"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tvComodoTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comodo"
+                android:padding="5dp"/>
+
+           <TextView
+               android:id="@+id/tvDescricaoTarefa"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Descrição"
+               />
+        </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ibCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/shape_check_verde"
+                android:elevation="2dp"
+                android:src="@drawable/ic_check_black_24dp"
+                android:layout_gravity="right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divisaoHorizontal" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
